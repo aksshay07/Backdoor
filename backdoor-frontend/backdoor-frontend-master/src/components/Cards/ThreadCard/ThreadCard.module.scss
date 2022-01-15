@@ -1,0 +1,7 @@
+@import '../../../scss/config';
+
+.ThreadCard {
+    &:hover {
+        box-shadow: 0 0.2rem 1.7rem 0.01rem $elevation-grey;
+    }
+}

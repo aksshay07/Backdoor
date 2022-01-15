@@ -1,0 +1,33 @@
+@import "./scss/config";
+@import "../node_modules/bulma/sass/utilities/all";
+@import "../node_modules/bulma/sass/form/all";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .scrollbar {
+        // For Firefox
+        scrollbar-color: $red $grey-darker;
+        scrollbar-width: thin;
+
+        // For Chromium
+        &::-webkit-scrollbar {
+            width: 0.4rem;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $grey-darkest;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $red;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+body {
+  font-family: $font-body;
+  overflow-y: hidden;
+  @include site-background;
+}
